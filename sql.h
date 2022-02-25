@@ -3,12 +3,18 @@
 
 #include <stdbool.h>
 
+enum sqlactions {
+    Connessione,
+    Disconnessione,
+    Select,
+    Update
+};
+
 typedef struct {
     int* ldsno;
-    int* order;
-    int* 
-    enum actions a_perform;
-    enum p_states m_state;
+    int* status1_2;
+    int* step1_2;
+    enum sqlactions sa_perform;
 } sqlMission;
 
 typedef struct {
@@ -24,7 +30,7 @@ typedef struct {
 typedef struct {
     const char* name;
     sqlServer server;
-    enum socket_states s_state;  
+    enum socket_states s_state;  sq
 } sqlConnection;
 
 
